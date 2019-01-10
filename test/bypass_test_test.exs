@@ -14,7 +14,7 @@ defmodule BypassTestTest do
     end
     IO.puts "REQUEST"
 
-    HTTPotion.post(endpoint_url(bypass.port) <> "/1.1/statuses/update.json", body: "Elixir is awesome!")
+    HTTPotion.get(endpoint_url(bypass.port) <> "/1.1/statuses/update.json")
     |> IO.inspect
   end
 
